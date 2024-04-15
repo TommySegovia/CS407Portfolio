@@ -1,12 +1,19 @@
-import { DirectionalLight } from 'three';
+import { AmbientLight, DirectionalLight } from 'three';
 
-function createLights() {
+function createDirectionalLight() {
     // Create a directional light
     const light = new DirectionalLight('white', 8);
 
     light.position.set(10, 10, 10);
-    
-    return light;
-    }
 
-export { createLights };
+    return light;
+}
+
+function createAmbientLight(){
+    const light = new AmbientLight('red', 2);
+
+
+    return light;
+}
+
+export { createDirectionalLight, createAmbientLight };
