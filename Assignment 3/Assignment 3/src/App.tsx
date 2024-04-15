@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     if (containerRef.current && !worldRef.current) {
       worldRef.current = new World(containerRef.current);
-      worldRef.current.render();
+      worldRef.current.startAnimationLoop();
     }
   }, []);
 
