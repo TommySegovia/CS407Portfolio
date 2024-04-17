@@ -12,6 +12,9 @@ function NavBar(){
                 <li>
                     <Link to="/Assignment_1">Assignment_1</Link>
                 </li>
+                <li>
+                    <Link to="/Assignment_2">Assignment_2</Link>
+                </li>
             </ul>
         </nav>
     )
