@@ -1,0 +1,66 @@
+canvas{
+  border: 1px solid red;
+  border-radius: 60px;
+  margin: auto;
+}
+
+.h1{
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button{
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #b84a4a;
+  color: white;
+}
+
+#mainPage{
+  margin: 30px;
+}
+
+
+#buttonDiv{
+  display: flex;
+  justify-content: center;
+}
+
+#animationDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#summaryDiv{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  border: #b84a4a 2px solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#listDiv{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-family: sans-serif;
+  margin-top: 20px;
+  border: #b84a4a 2px solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+
