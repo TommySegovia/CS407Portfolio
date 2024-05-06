@@ -4,6 +4,7 @@ import Home from '../Home/Home';
 import Assignment_1 from '../Assignment_1/HelloWorld/Assignment_1';
 import Assignment_2 from '../Assignment_2/Assignment_2';
 import Assignment_3 from '../Assignment_3/Assignment_3';
+import Assignment_4 from '../Assignment_4/Assignment_4';
 
 function AppRouter() {
   return (
@@ -14,6 +15,7 @@ function AppRouter() {
         <Route path="/Assignment_1" element={<Assignment_1 />} />
         <Route path="/Assignment_2" element={<Assignment_2 />} />
         <Route path="/Assignment_3" element={<Assignment_3 />} />
+        <Route path="/Assignment_4" element={<Assignment_4 />} />
       </Routes>
     </Router>
   );
