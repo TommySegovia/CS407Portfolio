@@ -25,7 +25,7 @@ import {
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 import { Loop } from "./systems/Loop.js";
 import { createParticles } from "./components/particles.js";
-import { createCustomShape } from "./components/customShape.js";
+import { createCustomShape, CustomMesh } from "./components/customShape.js";
 import { createFloor } from "./components/floor.js";
 import { createHelmet } from "./components/helmet.js";
 import { createFog } from "./components/fog.js";
@@ -37,14 +37,16 @@ class World {
   controls: OrbitControls;
   loop: Loop;
   camera: any;
+  customShape: CustomMesh;
   constructor(container: HTMLElement) {
     this.camera = createCamera();
     scene = createScene();
     renderer = createRenderer();
     container.append(renderer.domElement);
+    window.addEventListener("keydown", (event) => this.handleKeyDown(event));
 
     //objects
-    const customShape = createCustomShape(1);
+    this.customShape = createCustomShape();
     const floor = createFloor();
     const helmet = createHelmet();
 
@@ -68,7 +70,7 @@ class World {
     scene.add(spotLight);
     scene.add(axesHelper);
     scene.add(particles);
-    scene.add(customShape);
+    scene.add(this.customShape);
     scene.add(floor);
     scene.add(helmet);
     scene.fog = fog;
@@ -76,6 +78,7 @@ class World {
 
     //add to updatables
     this.loop.updatables.push(particles);
+    this.loop.updatables.push(this.customShape);
 
 
 
@@ -98,6 +101,12 @@ class World {
 
   stop(): void {
     this.loop.stop();
+  }
+
+  handleKeyDown(event: KeyboardEvent): void {
+    if (event.key === "r"){
+      this.customShape.ripple = !this.customShape.ripple;
+    }
   }
 
 }
