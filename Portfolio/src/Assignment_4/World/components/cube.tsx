@@ -1,5 +1,9 @@
 import { BoxGeometry, Mesh, MeshBasicMaterial, MeshStandardMaterial } from 'three';
 
+class Cube extends Mesh {
+  tick?: (delta : number) => void;
+}
+
 function createCube() {
   // create a geometry
   const geometry = new BoxGeometry(1.5,1.5,1.5);
@@ -8,9 +12,13 @@ function createCube() {
   const material = new MeshStandardMaterial({ color: 'purple'});
 
   // create a Mesh containing the geometry and material
-  const cube = new Mesh(geometry, material);
+  const cube = new Cube(geometry, material);
 
-  //cube.rotation.set(-0.5, -0.1, 0.8);
+  //add tick function to cube
+  cube.tick = (delta: number) => {
+    cube.rotation.x += 2 * delta;
+    cube.rotation.y += 2 * delta;
+  };
 
   return cube;
 }

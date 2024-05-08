@@ -9,7 +9,7 @@ function Assignment_4() {
   useEffect(() => {
     if (containerRef.current && !worldRef.current) {
       worldRef.current = new World(containerRef.current);
-      worldRef.current.startAnimationLoop();
+      worldRef.current.start();
     }
   }, []);
 
