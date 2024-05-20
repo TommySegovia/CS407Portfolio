@@ -1,0 +1,11 @@
+Model Information:
+* title:	Darkbeast
+* source:	https://sketchfab.com/3d-models/darkbeast-4e19288c33ed40659708b3d3184f6028
+* author:	vasian-65 (https://sketchfab.com/vasian-65)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Darkbeast" (https://sketchfab.com/3d-models/darkbeast-4e19288c33ed40659708b3d3184f6028) by vasian-65 (https://sketchfab.com/vasian-65) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

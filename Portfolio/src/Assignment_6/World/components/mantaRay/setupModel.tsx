@@ -1,0 +1,21 @@
+import { AnimationMixer } from "three";
+
+function setupModel(data : any){
+    const model = data.scene.children[0];
+    const clip = data.animations[0];
+
+    const mixer = new AnimationMixer(model);
+    const action = mixer.clipAction(clip);
+    action.play();
+
+    model.tick = (delta : number) => {
+        mixer.update(delta);
+
+        // Move the model along the x-axis at a constant rate
+        model.translateY(-3 * delta);
+    };
+
+    return model;
+}
+
+export { setupModel };

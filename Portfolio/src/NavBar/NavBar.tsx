@@ -25,6 +25,9 @@ function NavBar(){
                     <Link to="/Assignment_5">Assignment 5</Link>
                 </li>
                 <li>
+                    <Link to="/Assignment_6">Assignment 6</Link>
+                </li>
+                <li>
                     <a href="https://github.com/TommySegovia/CS407Portfolio">Github</a>
                 </li>
             </ul>
