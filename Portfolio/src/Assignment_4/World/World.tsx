@@ -117,6 +117,16 @@ class World {
         this.rightShipWing.rotateDown = true;
         this.camera.rotateDown = true;
         break;
+      case "a":
+        this.leftShipWing.rotateLeft = true;
+        this.rightShipWing.rotateLeft = true;
+        this.camera.rotateRight = true;
+        break;
+      case "d":
+        this.leftShipWing.rotateRight = true;
+        this.rightShipWing.rotateRight = true;
+        this.camera.rotateLeft = true;
+        break;
     }
   };
 
@@ -131,6 +141,16 @@ class World {
         this.leftShipWing.rotateDown = false;
         this.rightShipWing.rotateDown = false;
         this.camera.rotateDown = false;
+        break;
+      case "a":
+        this.leftShipWing.rotateLeft = false;
+        this.rightShipWing.rotateLeft = false;
+        this.camera.rotateRight = false;
+        break;
+      case "d":
+        this.leftShipWing.rotateRight = false;
+        this.rightShipWing.rotateRight = false;
+        this.camera.rotateLeft = false;
         break;
     }
   };
