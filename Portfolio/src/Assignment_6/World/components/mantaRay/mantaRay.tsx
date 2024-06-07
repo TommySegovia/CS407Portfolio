@@ -9,14 +9,14 @@ async function loadMantaRay() {
   const textureLoader = new TextureLoader();
 
   try {
-    const mantaRayData = await loader.loadAsync('/src/assets/MantaRay/scene.gltf');
+    const mantaRayData = await loader.loadAsync('/assets/MantaRay/scene.gltf');
 
     console.log('mantaRay data loaded:', mantaRayData);
 
     // Load textures
-    const diffuseTexture = await textureLoader.loadAsync('/src/assets/MantaRay/textures/MantaRay_diffuse.jpeg');
-    const specularGlossinessTexture = await textureLoader.loadAsync('/src/assets/MantaRay/textures/MantaRay_specularGlossiness.jpeg');
-    const normalTexture = await textureLoader.loadAsync('/src/assets/MantaRay/textures/MantaRay_normal.jpeg');
+    const diffuseTexture = await textureLoader.loadAsync('/assets/MantaRay/textures/MantaRay_diffuse.jpeg');
+    const specularGlossinessTexture = await textureLoader.loadAsync('/assets/MantaRay/textures/MantaRay_specularGlossiness.jpeg');
+    const normalTexture = await textureLoader.loadAsync('/assets/MantaRay/textures/MantaRay_normal.jpeg');
 
     // Apply textures to materials
     mantaRayData.scene.traverse((child: Object3D) => {
