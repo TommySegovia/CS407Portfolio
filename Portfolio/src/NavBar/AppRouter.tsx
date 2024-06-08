@@ -8,6 +8,7 @@ import Assignment_4 from '../Assignment_4/Assignment_4';
 import Assignment_5 from '../Assignment_5/Assignment_5';
 import Assignment_6 from '../Assignment_6/Assignment_6';
 import Assignment_7 from '../Assignment_7/Assignment_7';
+import Final from '../Final/Final';
 
 function AppRouter() {
   return (
@@ -22,6 +23,7 @@ function AppRouter() {
         <Route path="/Assignment_5" element={<Assignment_5 />} />
         <Route path="/Assignment_6" element={<Assignment_6 />} />
         <Route path="/Assignment_7" element={<Assignment_7 />} />
+        <Route path="/Final" element={<Final />} />
       </Routes>
     </Router>
   );
