@@ -20,6 +20,7 @@ function createSpotLight() {
     const light = new SpotLight('#ffffff', 200);
 
     light.position.set(0, 0.1, 5);
+    light.castShadow = true;
 
     //look at 0,0,0
 

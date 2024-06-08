@@ -116,6 +116,8 @@ function createCustomShape() {
   const material = new MeshPhongMaterial({ vertexColors: true });
   const shape = new CustomMesh(geometry, material);
   // shape.material.wireframe = true;
+  shape.receiveShadow = true;
+  shape.castShadow = true;
 
   let layerIndex = 0; // Track the current layer being scaled
   let scalarValues = [1, 1, 1]; // Initial scale factors for each layer
