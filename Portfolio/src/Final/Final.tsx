@@ -10,6 +10,7 @@ function Final() {
     if (containerRef.current && !worldRef.current) {
       worldRef.current = new World(containerRef.current);
       worldRef.current.start();
+      worldRef.current.init();
     }
   }, []);
 

@@ -13,10 +13,10 @@ function createCamera() {
         100, // far clipping plane
     );
 
-    camera.position.set(0, 0, 0);
+    camera.position.set(0, 1, 0);
 
     camera.tick = () => {
-        
+        // console.log(camera.position);
     };
 
     return camera;

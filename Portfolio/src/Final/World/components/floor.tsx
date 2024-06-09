@@ -2,10 +2,10 @@ import { BoxGeometry, Mesh, MeshBasicMaterial, MeshStandardMaterial, PlaneGeomet
 
 function createFloor() {
   // create a geometry
-    const geometry = new PlaneGeometry(10, 10);
+    const geometry = new PlaneGeometry(1000, 1000);
 
   // create a default (white) Basic material
-  const material = new MeshStandardMaterial({ color: 'purple'});
+  const material = new MeshStandardMaterial({ color: 'white'});
 
   // create a Mesh containing the geometry and material
   const floor = new Mesh(geometry, material);

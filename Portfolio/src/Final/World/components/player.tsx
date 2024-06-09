@@ -13,10 +13,6 @@ import { degToRad, radToDeg } from "three/src/math/MathUtils.js";
 
 class CustomMesh extends Mesh {
     tick?: (delta: number) => void;
-    movingForward: boolean = false;
-    movingBackward: boolean = false;
-    movingLeft: boolean = false;
-    movingRight: boolean = false;
 }
 
 function createPlayer(camera: PerspectiveCamera) {
@@ -33,19 +29,6 @@ function createPlayer(camera: PerspectiveCamera) {
     player.tick = (delta: number) => {
 
         player.rotation.copy(camera.rotation);
-        
-        if (player.movingForward) {
-            player.position.z -= movementSpeed * delta;
-        }
-        if (player.movingBackward) {
-            player.position.z += movementSpeed * delta;
-        }
-        if (player.movingLeft) {
-            player.position.x -= movementSpeed * delta;
-        }
-        if (player.movingRight) {
-            player.position.x += movementSpeed * delta;
-        }
 
     };
     return player;

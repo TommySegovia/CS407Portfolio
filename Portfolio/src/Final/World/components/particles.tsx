@@ -17,11 +17,11 @@ function createParticles() {
 
     geometry.setAttribute('position', new Float32BufferAttribute(vertices, 3));
 
-    const material = new PointsMaterial({ color: 0x888888, size: 0.5 });
+    const material = new PointsMaterial({ color: 0xffffff, size: 0.2 });
 
     const particles = new CustomPoints(geometry, material);
 
-    const particleSpeed = 10;
+    const particleSpeed = 1;
 
     particles.tick = (delta: any) => {
     const positions = particles.geometry.attributes.position.array;
@@ -41,7 +41,7 @@ function createParticles() {
         positions[i + 1] += delta * (Math.random() - 0.5);
         positions[i + 2] += delta * (Math.random() - 0.5);
 
-        positions[i + 2] += delta * particleSpeed;
+        positions[i + 1] -= delta * particleSpeed;
 
         newVertices.push(positions[i], positions[i + 1], positions[i + 2]);
     }
