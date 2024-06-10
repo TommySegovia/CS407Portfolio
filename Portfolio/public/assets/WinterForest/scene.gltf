@@ -1,0 +1,542 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 17673,
+      "max": [
+        4597.01806640625,
+        33.60792922973633,
+        4512.26611328125
+      ],
+      "min": [
+        1597.0179443359375,
+        -43.01926040649414,
+        1512.2659912109375
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 212076,
+      "componentType": 5126,
+      "count": 17673,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 17673,
+      "max": [
+        0.9980000257492065,
+        0.9980000257492065
+      ],
+      "min": [
+        0.0020000000949949026,
+        0.0020000000949949026
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 101376,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 424152,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        4468.341796875,
+        777.3142700195313,
+        4417.8828125
+      ],
+      "min": [
+        1897.39697265625,
+        10.482791900634766,
+        1766.56298828125
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1210536,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9996857643127441,
+        0.9999827146530151,
+        0.9999986290931702
+      ],
+      "min": [
+        -0.999888002872467,
+        -0.7243533134460449,
+        -0.9999737739562988
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 141384,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9929739236831665,
+        0.9914289712905884
+      ],
+      "min": [
+        0.0028609998989850283,
+        0.004852000158280134
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 665640,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9929739236831665,
+        0.9914289712905884
+      ],
+      "min": [
+        0.0028609998989850283,
+        0.004852000158280134
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 405504,
+      "componentType": 5125,
+      "count": 250659,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1996920,
+      "componentType": 5126,
+      "count": 52196,
+      "max": [
+        4526.52880859375,
+        579.25048828125,
+        4125.84521484375
+      ],
+      "min": [
+        1761.824951171875,
+        -3.4839515686035156,
+        1463.991943359375
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2623272,
+      "componentType": 5126,
+      "count": 52196,
+      "max": [
+        0.9994746446609497,
+        0.9999778866767883,
+        0.9994447827339172
+      ],
+      "min": [
+        -0.9999082684516907,
+        -0.7157930135726929,
+        -0.9996200203895569
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1189896,
+      "componentType": 5126,
+      "count": 52196,
+      "max": [
+        0.9929739236831665,
+        0.9914289712905884
+      ],
+      "min": [
+        0.0028609998989850283,
+        0.004852000158280134
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1607464,
+      "componentType": 5126,
+      "count": 52196,
+      "max": [
+        0.9929739236831665,
+        0.9914289712905884
+      ],
+      "min": [
+        0.0028609998989850283,
+        0.004852000158280134
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1408140,
+      "componentType": 5125,
+      "count": 199701,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3249624,
+      "componentType": 5126,
+      "count": 1320,
+      "max": [
+        4446.39501953125,
+        705.5410766601563,
+        4346.5859375
+      ],
+      "min": [
+        1870.31396484375,
+        -12.002288818359375,
+        1556.2430419921875
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3265464,
+      "componentType": 5126,
+      "count": 1320,
+      "max": [
+        0.9992651343345642,
+        0.6005218625068665,
+        0.9999633431434631
+      ],
+      "min": [
+        -0.9995218515396118,
+        -0.09943968057632446,
+        -0.9998024106025696
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2025032,
+      "componentType": 5126,
+      "count": 1320,
+      "max": [
+        0.09587700664997101,
+        0.9980000257492065
+      ],
+      "min": [
+        0.0020000000949949026,
+        0.0020000000949949026
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 2206944,
+      "componentType": 5125,
+      "count": 5400,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "yankobe (https://sketchfab.com/yankobe.do)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/winter-forest-3d7de64240fb48ce8203a4e58f71cada",
+      "title": "Winter Forest"
+    },
+    "generator": "Sketchfab-16.12.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2228544,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2035592,
+      "byteOffset": 2228544,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3281304,
+      "byteOffset": 4264136,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 7545440,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Snow_Ground_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Pine_Tree_Needles_BaseColor_baseColor.png"
+    },
+    {
+      "uri": "textures/Pine_Tree_Bark_BaseColor_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Snow_Ground",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9577051494623774
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "Pine_Tree_Needles_BaseColor",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9577051494623774
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Pine_Tree_Bark_BaseColor",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9577051494623774
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Fur Pine Tree.Shape_Snow_Ground_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Fur Pine Tree.Shape_Pine_Tree_Needles_BaseColor_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6,
+            "TEXCOORD_1": 7
+          },
+          "indices": 8,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Fur Pine Tree.Shape_Pine_Tree_Needles_BaseColor_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11,
+            "TEXCOORD_1": 12
+          },
+          "indices": 13,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Fur Pine Tree.Shape_Pine_Tree_Bark_BaseColor_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 15,
+            "POSITION": 14,
+            "TEXCOORD_0": 16
+          },
+          "indices": 17,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Winter Forest.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -3111.055908203125,
+        0.0,
+        -3018.801025390625,
+        1.0
+      ],
+      "name": "Fur Pine Tree"
+    },
+    {
+      "children": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "name": "Fur Pine Tree.Shape"
+    },
+    {
+      "mesh": 0,
+      "name": "Fur Pine Tree.Shape_Snow_Ground_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Fur Pine Tree.Shape_Pine_Tree_Needles_BaseColor_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Fur Pine Tree.Shape_Pine_Tree_Needles_BaseColor_0"
+    },
+    {
+      "mesh": 3,
+      "name": "Fur Pine Tree.Shape_Pine_Tree_Bark_BaseColor_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

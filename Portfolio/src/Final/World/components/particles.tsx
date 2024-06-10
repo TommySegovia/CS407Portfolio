@@ -8,7 +8,7 @@ function createParticles() {
     const geometry = new BufferGeometry();
     const vertices = [];
 
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 30000; i++) {
         const x = Math.random() * 100 - 50;
         const y = Math.random() * 100 - 50;
         const z = Math.random() * 100 - 50;
@@ -21,7 +21,7 @@ function createParticles() {
 
     const particles = new CustomPoints(geometry, material);
 
-    const particleSpeed = 1;
+    const particleSpeed = 3;
 
     particles.tick = (delta: any) => {
     const positions = particles.geometry.attributes.position.array;
@@ -41,7 +41,8 @@ function createParticles() {
         positions[i + 1] += delta * (Math.random() - 0.5);
         positions[i + 2] += delta * (Math.random() - 0.5);
 
-        positions[i + 1] -= delta * particleSpeed;
+        positions[i + 1] -= delta * (1 * particleSpeed);
+        positions[i] -= delta * (3 * particleSpeed);
 
         newVertices.push(positions[i], positions[i + 1], positions[i + 2]);
     }

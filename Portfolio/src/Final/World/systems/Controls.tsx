@@ -13,10 +13,12 @@ export class Controls{
     public movingLeft: boolean = false;
     public movingRight: boolean = false;
     public jumping: boolean = false;
+    public crouching: boolean = false;
 
     private playerHeight = 3;
     private movementSpeed = 10;
     private gravity = -13.8;
+    private crouchHeight = 1.5;
     
     verticalVelocity: number;
 
@@ -39,15 +41,23 @@ export class Controls{
     }
 
     update(delta: number) {
-        if (this.camera.position.y < this.playerHeight)
+        
+        if ((this.camera.position.y < this.playerHeight) && !this.crouching)
             {
-                this.camera.position.y = this.playerHeight;
+                this.camera.position.addScaledVector(new Vector3(0, 0.25, 0), this.movementSpeed * delta);
             }
         if (this.camera.position.y > this.playerHeight)
             {
                 this.camera.position.addScaledVector(new Vector3(0, -0.25, 0), this.movementSpeed * delta);
             }
         if (this.controls.isLocked) {
+
+            if (this.crouching){
+                if (this.camera.position.y > this.crouchHeight){
+                    this.camera.position.addScaledVector(new Vector3(0, -0.25, 0), this.movementSpeed * delta);
+                }
+
+            }
             const direction = new Vector3();
             this.controls.getDirection(direction);
             direction.y = 0; // This line ensures movement only in X and Z directions

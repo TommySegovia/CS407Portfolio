@@ -1,34 +1,26 @@
 import {
-  Mesh,
-  PerspectiveCamera,
-  Plane,
-  Quaternion,
-  Raycaster,
   Scene,
-  SpotLight,
-  Vector2,
-  Vector3,
   WebGLRenderer,
   AxesHelper,
   PointLight,
+  AudioLoader
 } from "three";
 import { createScene } from "./components/scene.js";
 import { createRenderer } from "./systems/renderer.js";
 import { Resizer } from "./systems/Resizer.js";
-import {
-  createAmbientLight,
-  createDirectionalLight,
-} from "./components/lights.js";
+import { createAmbientLight, createDirectionalLight, createPointLight } from "./components/lights.js";
 import { Loop } from "./systems/Loop.js";
 import { createParticles } from "./components/particles.js";
 import { createFloor } from "./components/floor.js";
 import { createPlayer } from "./components/player.js";
 import { createCamera } from "./components/camera.js";
-import { FirstPersonControls } from "three/examples/jsm/controls/FirstPersonControls.js";
 import { Controls } from "./systems/Controls.js";
 import { createFog } from "./components/fog.js";
-import { createPointLight } from "./components/lights.js";
 import { loadlantern } from "./components/lantern/lantern.js";
+import { createAmbient, createFootstepsSound } from "./systems/Sounds.js";
+import { AudioListener } from "three";
+import { loadlandTile } from "./components/landTile/landTile.js";
+import { createComposer } from "./systems/composer.js";
 
 let renderer: WebGLRenderer;
 let scene: Scene;
@@ -40,6 +32,14 @@ class World {
   controls: Controls;
   pointLight: PointLight;
   lantern: any;
+  audioListener: AudioListener;
+  audioLoader: AudioLoader;
+  walkingSoundPlaying: boolean = false;
+  walkingSound: any;
+  ambientPlaying: boolean = false;
+  ambient: any;
+  composer: any;
+  
   constructor(container: HTMLElement) {
     this.camera = createCamera();
 
@@ -72,6 +72,17 @@ class World {
     // Systems
     const axesHelper = new AxesHelper(5);
     this.loop = new Loop(this.camera, scene, renderer);
+    this.composer = createComposer(renderer, scene, this.camera);
+    console.log(this.composer);
+
+
+    // Audio
+    this.audioLoader = new AudioLoader();
+    this.audioListener = new AudioListener();
+    this.camera.add(this.audioListener);
+    this.walkingSound = createFootstepsSound(this.audioListener, this.audioLoader);
+    this.ambient = createAmbient(this.audioListener, this.audioLoader);
+
 
     // Particles
     const particles = createParticles();
@@ -104,22 +115,28 @@ class World {
     renderer.setAnimationLoop(() => {
       this.controls.update(0.016); // Assuming 60fps, so 1/60 = 0.016
       this.update();
-      renderer.render(scene, this.camera); // Use currentCamera for rendering
+      this.composer.render();
     });
   }
 
   async init(){
     try{
       console.log("Async init");
+      
+      //lantern
       this.lantern = await loadlantern(this.camera);
       scene.add(this.lantern);
       this.loop.updatables.push(this.lantern);
       this.lantern.add(new AxesHelper(5));
       this.lantern.add(this.pointLight);
-      console.log(this.pointLight.position);
-      //world position of lantern
-      console.log(this.lantern.getWorldPosition(new Vector3()));
+      // console.log(this.pointLight.position);
+      // console.log(this.lantern.getWorldPosition(new Vector3()));
       this.loop.updatables.push(this.lantern);
+
+      //land
+      const landTile = await loadlandTile(this.camera);
+      scene.add(landTile);
+
 
     }
     catch(error){
@@ -136,7 +153,7 @@ class World {
 
   render(): void {
     this.update();
-    renderer.render(scene, this.camera); // Use currentCamera for rendering
+    this.composer.render();
   }
 
   start(): void {
@@ -149,23 +166,44 @@ class World {
   }
 
   handleKeyDown = (event: KeyboardEvent) => {
+    let walkingKeyPressed = false;
     switch (event.key) {
       case "w":
-        // console.log(this.pointLight.getWorldPosition(new Vector3()));
         this.controls.movingForward = true;
+        walkingKeyPressed = true;
         break;
       case "s":
         this.controls.movingBackward = true;
+        walkingKeyPressed = true;
         break;
       case "a":
         this.controls.movingLeft = true;
+        walkingKeyPressed = true;
         break;
       case "d":
         this.controls.movingRight = true;
+        walkingKeyPressed = true;
         break;
       case " ":
         this.controls.jumping = true;
         break;
+      case "m":
+        if (this.ambientPlaying) {
+          this.ambient.stop();
+          this.ambientPlaying = false;
+        } else {
+          this.ambient.play();
+          this.ambientPlaying = true;
+        }
+        break;
+      case "c":
+        this.controls.crouching = true;
+        break;
+    }
+
+    if (walkingKeyPressed && !this.walkingSoundPlaying) {
+      this.walkingSound.play();
+      this.walkingSoundPlaying = true;
     }
   };
 
@@ -186,8 +224,18 @@ class World {
       case " ":
         this.controls.jumping = false;
         break;
+      case "c":
+        this.controls.crouching = false;
+        break;
+    }
+
+    // Check if all movement keys are released
+    if ((!this.controls.movingForward && !this.controls.movingBackward && !this.controls.movingLeft && !this.controls.movingRight) || this.controls.jumping) {
+      if (this.walkingSound && this.walkingSound.isPlaying) {
+        this.walkingSound.stop();
+      }
+      this.walkingSoundPlaying = false;
     }
   };
 }
-
 export { World };

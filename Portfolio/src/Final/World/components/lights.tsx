@@ -1,6 +1,6 @@
 import { AmbientLight, DirectionalLight, PointLight, SpotLight } from 'three';
 
-function createDirectionalLight() {
+export function createDirectionalLight() {
     // Create a directional light
     const light = new DirectionalLight('orange', .2);
 
@@ -9,13 +9,13 @@ function createDirectionalLight() {
     return light;
 }
 
-function createAmbientLight(){
+export function createAmbientLight(){
     const light = new AmbientLight('white', .1);
 
     return light;
 }
 
-function createPointLight(){
+export function createPointLight(){
     const light = new PointLight('orange', 15);
 
     light.position.set(0, 0, 0);
@@ -23,6 +23,3 @@ function createPointLight(){
     return light;
 
 }
-
-
-export { createDirectionalLight, createAmbientLight, createPointLight};
