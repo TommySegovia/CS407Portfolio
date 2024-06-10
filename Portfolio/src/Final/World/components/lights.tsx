@@ -16,7 +16,7 @@ export function createAmbientLight(){
 }
 
 export function createPointLight(){
-    const light = new PointLight('orange', 15);
+    const light = new PointLight('orange', 80);
 
     light.position.set(0, 0, 0);
 

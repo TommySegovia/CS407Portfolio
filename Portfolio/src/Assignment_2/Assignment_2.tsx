@@ -30,14 +30,14 @@ function Assignment_2() {
           wireFrameState={wireFrameState}
         />
       </div>
-      <div id="summaryDiv">
+      <div id="summaryDiv" className={styles.summaryDiv}>
         <p>
           The goal of this assignment is to prove the architecture we'll be
           using to display WebGl 3D graphics in a web application. We want to
           show that we can successfully:
         </p>
       </div>
-      <div id="listDiv">
+      <div id="listDiv" className={styles.listDiv}>
         <ul>
           <li>Use the three.js library to create a 3D scene</li>
           <li>Render the scene to a canvas element</li>

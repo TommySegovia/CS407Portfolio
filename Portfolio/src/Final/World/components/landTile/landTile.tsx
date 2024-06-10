@@ -60,8 +60,8 @@ async function loadlandTile(camera: PerspectiveCamera) {
 
     console.log('landTile model set up:', landTile);
 
-    landTile.position.set(0, 0, -3);
-    landTile.scale.set(3, 3, 3);
+    landTile.position.set(0, 0, -70);
+    landTile.scale.set(5, 5, 5);
 
     landTile.tick = () => {
     }

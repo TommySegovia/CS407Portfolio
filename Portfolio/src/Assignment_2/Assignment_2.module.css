@@ -37,7 +37,7 @@ canvas{
   margin-right: auto;
 }
 
-#summaryDiv{
+.summaryDiv{
   width: 50%;
   margin: 0 auto;
   display: flex;
@@ -51,11 +51,12 @@ canvas{
   padding: 10px;
 }
 
-#listDiv{
+.listDiv{
   width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  text-align: left;
   font-size: large;
   font-family: sans-serif;
   margin-top: 20px;

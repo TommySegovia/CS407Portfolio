@@ -70,7 +70,7 @@ class World {
     this.pointLight = createPointLight();
 
     // Systems
-    const axesHelper = new AxesHelper(5);
+    // const axesHelper = new AxesHelper(5);
     this.loop = new Loop(this.camera, scene, renderer);
     this.composer = createComposer(renderer, scene, this.camera);
     console.log(this.composer);
@@ -93,10 +93,10 @@ class World {
     // Add to scene
     scene.add(ambientLight);
     scene.add(directionalLight);
-    scene.add(axesHelper);
+    // scene.add(axesHelper);
     scene.add(particles);
     scene.add(floor);
-    scene.add(this.player);
+    // scene.add(this.player);
 
     this.player.position.set(0, 0.5, -5);
 
@@ -127,7 +127,7 @@ class World {
       this.lantern = await loadlantern(this.camera);
       scene.add(this.lantern);
       this.loop.updatables.push(this.lantern);
-      this.lantern.add(new AxesHelper(5));
+      // this.lantern.add(new AxesHelper(5));
       this.lantern.add(this.pointLight);
       // console.log(this.pointLight.position);
       // console.log(this.lantern.getWorldPosition(new Vector3()));

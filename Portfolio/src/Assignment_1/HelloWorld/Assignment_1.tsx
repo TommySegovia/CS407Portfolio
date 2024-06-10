@@ -6,6 +6,11 @@ function Assignment_1(){
 		<div id={styles.mainPage}>
 			<h1 className={styles.h1}>Assignment 1</h1>
 			<Animation />
+			<div id="summaryDiv" className={styles.summaryDiv}>
+			<p>
+			The goal of this assignment is to create a simple 'Hello World' demo using Three.js
+			</p>
+		</div>
 		</div>
 	)
 }

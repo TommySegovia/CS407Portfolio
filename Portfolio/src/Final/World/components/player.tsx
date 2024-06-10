@@ -21,8 +21,8 @@ function createPlayer(camera: PerspectiveCamera) {
     const player = new CustomMesh(geometry, material);
 
     //axis helper
-    const axesHelper = new AxesHelper(5);
-    player.add(axesHelper);
+    // const axesHelper = new AxesHelper(5);
+    // player.add(axesHelper);
 
     const movementSpeed = 1;
 

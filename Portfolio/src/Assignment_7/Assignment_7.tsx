@@ -56,6 +56,21 @@ function Assignment_7() {
 
       <button id="compileShadersButton" style={{margin: "20px"}} onClick={handleCompileShaders}>Compile Shaders</button>
       <div className={styles.container} ref={containerRef} />
+      <div id="summaryDiv" className={styles.summaryDiv}>
+        <p>
+          The goal of this assignment is to create and use custom vertex and fragment shaders
+        </p>
+      </div>
+      <div id="listDiv" className={styles.listDiv}>
+        <ul>
+          <li>
+            Edit the vertex and fragment shaders in the text areas above and compile shaders to see how the cube changes
+          </li>
+          <li>
+            Use the orbit controls with the mouse to orbit, pan, and zoom in and out in the scene
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
